@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "yunusasuroglu\\bulk-emailler\\BulkEmailerServiceProvider"
+                "yunusasuroglu\\bulk-emailler\\src\\BulkEmailerServiceProvider"
             ],
             "aliases": {
                 "BulkEmailer": "yunusasuroglu\\bulk-emailler\\Facades\\BulkEmailer"
