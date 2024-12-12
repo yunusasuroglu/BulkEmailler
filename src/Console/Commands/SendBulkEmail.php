@@ -1,6 +1,6 @@
 <?php
 
-namespace yunusasuroglu\BulkEmailer\Console\Commands;
+namespace YunusAsuroglu\BulkEmailler\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
