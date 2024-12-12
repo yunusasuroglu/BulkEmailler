@@ -1,6 +1,7 @@
 {
     "name": "yunusasuroglu/bulk-emailler",
-    "description": "Laravel için toplu e-posta gönderimi paketi",
+    "version": "1.0.0",
+    "description": "Bulk email sending package for Laravel",
     "type": "library",
     "license": "MIT",
     "authors": [
