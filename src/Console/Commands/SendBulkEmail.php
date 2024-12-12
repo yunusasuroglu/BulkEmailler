@@ -8,10 +8,10 @@ use YunusAsuroglu\BulkEmailler\Mail\BulkMailer;
 
 class SendBulkEmail extends Command
 {
-    protected $signature = 'bulk-email:send 
-                            {emails : Recipients email addresses (separated by commas)} 
-                            {subject : Email subject} 
-                            {data : Email Content}';
+    protected $signature = 'bulk-email:send
+                             {emails : Comma separated email addresses}
+                             {subject : Subject of the email}
+                             {data : Content of the email}';
     public function handle()
 {
     $emails = explode(',', $this->argument('emails'));
