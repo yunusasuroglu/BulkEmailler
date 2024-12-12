@@ -1,10 +1,10 @@
 <?php
 
-namespace yunusasuroglu\BulkEmailer\Facades;
+namespace yunusasuroglu\BulkEmailler\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class BulkEmailer extends Facade
+class BulkEmailler extends Facade
 {
     protected static function getFacadeAccessor()
     {
