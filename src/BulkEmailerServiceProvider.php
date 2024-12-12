@@ -9,7 +9,6 @@ class BulkEmailerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/Views', 'bulk-emailer');
-        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
         $this->publishes([
             __DIR__ . '/Config/bulk-emailer.php' => config_path('bulk-emailer.php'),
