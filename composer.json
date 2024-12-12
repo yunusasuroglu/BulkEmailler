@@ -19,6 +19,9 @@
     },
     "extra": {
         "laravel": {
+            "providers": [  
+                "YunusAsuroglu\\BulkEmailler\\BulkEmailerServiceProvider"  
+            ],
             "aliases": {
                 "BulkEmailer": "YunusAsuroglu\\BulkEmailler\\Facades\\BulkEmailer"
             }
