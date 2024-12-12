@@ -19,6 +19,7 @@
             "YunusAsuroglu\\BulkEmailler\\Facades\\": "src/Facades/"
         }
     },
+    
     "extra": {
         "laravel": {
             "providers": [  
@@ -27,7 +28,14 @@
             "aliases": {
                 "BulkEmailer": "YunusAsuroglu\\BulkEmailler\\Facades\\BulkEmailer"
             }
-        }
+        },
+        "repositories": [
+            {
+                "type": "vcs",
+                "url": "https://github.com/yunusasuroglu/bulk-emailler"
+            }
+        ]
+        
     },
     "minimum-stability": "dev",
     "prefer-stable": true
