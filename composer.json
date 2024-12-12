@@ -14,16 +14,16 @@
     },
     "autoload": {
         "psr-4": {
-            "YunusAsuroglu\\BulkEmailler\\": "src/"
+            "yunusasuroglu\\bulk-emailler\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "YunusAsuroglu\\BulkEmailler\\BulkEmailerServiceProvider"
+                "yunusasuroglu\\BulkEmailler\\BulkEmailerServiceProvider"
             ],
             "aliases": {
-                "BulkEmailer": "YunusAsuroglu\\BulkEmailler\\Facades\\BulkEmailer"
+                "BulkEmailer": "yunusasuroglu\\BulkEmailler\\Facades\\BulkEmailer"
             }
         }
     },
