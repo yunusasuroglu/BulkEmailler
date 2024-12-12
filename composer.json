@@ -1,5 +1,5 @@
 {
-    "name": "yunusasuroglu/bulk-emailler",
+    "name": "yunusasuroglu/bulkEmailler",
     "description": "Laravel için toplu e-posta gönderimi paketi",
     "type": "library",
     "license": "MIT",
