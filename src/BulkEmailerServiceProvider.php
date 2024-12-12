@@ -21,7 +21,7 @@ class BulkEmailerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/Config/bulk-emailer.php', 'bulk-emailer');
 
         $this->commands([
-            \YunusAsuroglu\BulkEmailer\Console\Commands\SendBulkEmail::class,
+            \YunusAsuroglu\BulkEmailler\Console\Commands\SendBulkEmail::class,
         ]);
     }
 }
