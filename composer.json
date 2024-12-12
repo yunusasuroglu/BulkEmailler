@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "YunusAsuroglu\\bulk-emailler\\": "src/"
+            "YunusAsuroglu\\BulkEmailler\\": "src/"
         }
     },
     "extra": {
