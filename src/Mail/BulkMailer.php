@@ -9,18 +9,21 @@ use Illuminate\Queue\SerializesModels;
 class BulkMailer extends Mailable
 {
     use Queueable, SerializesModels;
-
+    
     public $subjectLine;
-    public $messageBody;
-
-    public function __construct($subject, $body)
+    public $data;
+    public $view;
+    
+    // Yapıcı fonksiyonu, view parametresi ile birlikte alacak
+    public function __construct($subject, $data, $view = 'emails.bulkmailer')
     {
         $this->subjectLine = $subject;
-        $this->messageBody = $body;
+        $this->data = $data;
+        $this->view = $view;
     }
-
+    
     public function build()
     {
-        return $this->subject($this->subjectLine)->view('bulk-emailer::emails.bulkmailer');
+        return $this->subject($this->data['subject'])->view($this->view)->with('data', $this->data);
     }
 }
