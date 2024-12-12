@@ -16,6 +16,7 @@
         "psr-4": {
             "YunusAsuroglu\\BulkEmailler\\": "src/"
         }
+        "YunusAsuroglu\\BulkEmailer\\Facades\\": "src/Facades/"
     },
     "extra": {
         "laravel": {
