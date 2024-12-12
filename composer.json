@@ -14,9 +14,9 @@
     },
     "autoload": {
         "psr-4": {
-            "YunusAsuroglu\\BulkEmailler\\": "src/"
+            "YunusAsuroglu\\BulkEmailer\\": "src/",
+            "YunusAsuroglu\\BulkEmailer\\Facades\\": "src/Facades/"
         }
-        "YunusAsuroglu\\BulkEmailer\\Facades\\": "src/Facades/"
     },
     "extra": {
         "laravel": {
