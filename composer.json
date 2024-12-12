@@ -32,7 +32,7 @@
         "repositories": [
             {
                 "type": "vcs",
-                "url": "https://github.com/yunusasuroglu/bulk-emailler"
+                "url": "https://github.com/yunusasuroglu/bulk-mailler"
             }
         ]
         
