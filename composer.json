@@ -14,8 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "YunusAsuroglu\\BulkEmailer\\": "src/",
-            "YunusAsuroglu\\BulkEmailer\\Facades\\": "src/Facades/"
+            "YunusAsuroglu\\BulkEmailler\\": "src/",
+            "YunusAsuroglu\\BulkEmailler\\Facades\\": "src/Facades/"
         }
     },
     "extra": {
