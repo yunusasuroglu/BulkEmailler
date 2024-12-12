@@ -1,10 +1,10 @@
 <?php
 
-namespace YunusAsuroglu\BulkEmailer\Console\Commands;
+namespace YunusAsuroglu\BulkEmailler\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
-use yunusasuroglu\BulkEmailer\Mail\BulkMailer;
+use yunusasuroglu\BulkEmailler\Mail\BulkMailer;
 
 class SendBulkEmail extends Command
 {
