@@ -1,6 +1,6 @@
 <?php
 
-namespace yunusasuroglu\BulkEmailler\Facades;
+namespace YunusAsuroglu\BulkEmailler\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
