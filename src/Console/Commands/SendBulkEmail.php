@@ -9,7 +9,7 @@ use YunusAsuroglu\BulkEmailler\Mail\BulkMailer;
 class SendBulkEmail extends Command
 {
     protected $signature = 'bulk-email:send 
-                            {emails : Recipients' email addresses (separated by commas)} 
+                            {emails : Recipients email addresses (separated by commas)} 
                             {subject : Email subject} 
                             {data : Email Content}';
     public function handle()
