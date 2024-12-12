@@ -4,7 +4,7 @@ namespace YunusAsuroglu\BulkEmailler\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class BulkEmailler extends Facade
+class BulkEmailer extends Facade
 {
     protected static function getFacadeAccessor()
     {
