@@ -1,6 +1,6 @@
 <?php
 
-namespace yunusasuroglu\BulkEmailler\Mail;
+namespace YunusAsuroglu\BulkEmailler\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
