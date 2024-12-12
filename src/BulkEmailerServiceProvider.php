@@ -1,6 +1,6 @@
 <?php
 
-namespace yunusasuroglu\BulkEmailer;
+namespace YunusAsuroglu\BulkEmailer;
 
 use Illuminate\Support\ServiceProvider;
 
