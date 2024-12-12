@@ -1,5 +1,5 @@
 {
-    "name": "yunusasuroglu/bulk-emailler",
+    "name": "yunusasuroglu/bulk-mailler",
     "version": "1.0.0",
     "description": "Bulk email sending package for Laravel",
     "type": "library",
