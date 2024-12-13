@@ -135,3 +135,12 @@ This place is completely yours, you can customize it as you wish:
 - Composer
 
 ## Contribute
+
+1. Fork this project.
+2. Create a new feature branch (`feature/feature-adi`).
+3. Commit your changes (`git commit -m 'New feature added'`).
+4. Push the branch to master (`git push origin feature/feature-adi`).
+5. Open a Pull Request.
+
+## Licence
+This project is licensed under the [MIT License](LICENSE).
