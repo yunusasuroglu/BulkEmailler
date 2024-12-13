@@ -69,3 +69,27 @@ class BulkEmailController extends Controller
     }
 }
 ```
+
+## Rota oluşturma
+
+oluşturduğumuz controller yapısı için rotamızı oluşturalım :
+
+```php
+Route::post('/send-bulk-email', [BulkEmailController::class, 'sendBulkMail'])->name('send.bulk.email');
+```
+
+## Form oluşturma
+
+Form Rotası :
+
+```php
+Route::get('/bulk-email', [BulkEmailController::class, 'BulkMail'])->name('bulk.email');
+```
+Form Controller :
+
+```php
+public function BulkMail()
+{
+    return view('email-form');
+}
+```
