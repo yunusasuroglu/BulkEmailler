@@ -29,10 +29,8 @@ Bu kısım örnek olarak verilmiştir kendi projenize göre şekillendirebilirsi
 ```bash
 php artisan make:controller BulkEmailController
 ```
-```bash
-php artisan make:controller BulkEmailController
-```
-```bash
+
+```php
 <?php
 
 namespace App\Http\Controllers;
