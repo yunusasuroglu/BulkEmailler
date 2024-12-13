@@ -40,7 +40,10 @@ use YunusAsuroglu\BulkEmailler\Facades\BulkEmailer;
 
 class BulkEmailController extends Controller
 {
-    
+    public function BulkMail()
+    {
+        return view('email-form');
+    }
     public function sendBulkMail(Request $request)
     {        
         $testEmails = "example@example.com, test@test.com";
@@ -70,26 +73,34 @@ class BulkEmailController extends Controller
 }
 ```
 
-## Rota oluşturma
+## web.php
 
-oluşturduğumuz controller yapısı için rotamızı oluşturalım :
-
-```php
-Route::post('/send-bulk-email', [BulkEmailController::class, 'sendBulkMail'])->name('send.bulk.email');
-```
-
-## Form oluşturma
-
-Form Rotası :
+Rotaları Ekleyelim :
 
 ```php
 Route::get('/bulk-email', [BulkEmailController::class, 'BulkMail'])->name('bulk.email');
+Route::post('/send-bulk-email', [BulkEmailController::class, 'sendBulkMail'])->name('send.bulk.email');
 ```
-Form Controller :
+
+## Form View
+
+Burası Tamamen size ait istediğiniz gibi özelleştirebilirsiniz :
 
 ```php
-public function BulkMail()
-{
-    return view('email-form');
-}
+<form method="POST" action="{{ route('send.bulk.email') }}">
+    @csrf
+    <div class="form-group">
+        <label class="form-label text-primary">Emails</label>
+        <input type="text" name="emails" class="form-control">
+    </div>
+    <div class="form-group">
+        <label class="form-label text-primary">Mail Subject</label>
+        <input type="text" name="subject" class="form-control">
+    </div>
+    <div class="form-group mt-3">
+        <label class="form-label text-primary" for="exampleFormControlTextarea1">Mail Content</label>
+        <textarea name="content" id="editor" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+    </div>
+    <button id="submitButton" type="submit" class="btn mt-3 btn-primary">Send</button>
+</form>
 ```
