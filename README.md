@@ -12,7 +12,7 @@ Paketinizi projeye dahil etmek için aşağıdaki Composer komutunu çalıştır
 
 ```bash
 composer require yunusasuroglu/bulk-emailler
-
+```
 ## View Oluşturma
 
 E Posta Şablonu için bir blade oluşturun bu işlemi manuel de yapabilirsiniz:
@@ -20,7 +20,7 @@ E Posta Şablonu için bir blade oluşturun bu işlemi manuel de yapabilirsiniz:
 ```bash
 mkdir -p resources/views/emails
 touch resources/views/emails/bulk-email.blade.php
-
+```
 
 ## Controller oluşturma
 
@@ -28,10 +28,10 @@ Bu kısım örnek olarak verilmiştir kendi projenize göre şekillendirebilirsi
 
 ```bash
 php artisan make:controller BulkEmailController
-
+```
 ```bash
 php artisan make:controller BulkEmailController
-
+```
 ```bash
 <?php
 
@@ -70,4 +70,4 @@ class BulkEmailController extends Controller
         }
     }
 }
-
+```
