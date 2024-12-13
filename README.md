@@ -129,3 +129,9 @@ This place is completely yours, you can customize it as you wish:
 </body>
 </html>
 ```
+## Requirements
+
+- PHP 8.0 or above
+- Composer
+
+## Contribute
