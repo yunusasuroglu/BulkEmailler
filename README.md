@@ -1,30 +1,30 @@
 # Bulk Emailler
 
-Bulk Emailler, Laravel için geliştirilmiş bir paket olup toplu e-posta gönderimini kolaylaştırır. Bu paket ile birden fazla alıcıya hızlı ve güvenli bir şekilde e-posta gönderebilirsiniz. Paket, basit bir yapı ile özelleştirilebilir ve kolayca entegre edilebilir.
+Bulk Emails is a package developed for Laravel that makes sending bulk emails easy. With this package, you can send emails to multiple recipients quickly and securely. The package is customizable and easily integrated with a simple structure.
 
-### Sürüm: 1.0
+### Version: 1.0
 
-Bu ilk sürüm, temel toplu e-posta gönderim işlevselliğini sunar.
+This first version offers basic bulk email sending functionality.
 
-## Paket Yükleme
+## Package Installation
 
-Paketinizi projeye dahil etmek için aşağıdaki Composer komutunu çalıştırın:
+Run the following Composer command to include your package in the project:
 
 ```bash
 composer require yunusasuroglu/bulk-emailler
 ```
-## View Oluşturma
+## View Create
 
-E Posta Şablonu için bir blade oluşturun bu işlemi manuel de yapabilirsiniz:
+Create a blade for Email Template, you can also do this manually:
 
 ```bash
 mkdir -p resources/views/emails
 touch resources/views/emails/bulk-email.blade.php
 ```
 
-## Controller oluşturma
+## Controller Create
 
-Bu kısım örnek olarak verilmiştir kendi projenize göre şekillendirebilirsiniz :
+This part is given as an example, you can shape it according to your own project:
 
 ```bash
 php artisan make:controller BulkEmailController
@@ -50,10 +50,12 @@ class BulkEmailController extends Controller
         $testSubject = "Test Mailler";
         $testMessage = "content";
         $testItem = "item";
+        $testItem2 = "item2";
+        // You can add as much as you want here, it's up to you. 
         $emails = collect(explode(',', $testEmails))->map(fn($email) => trim($email))->filter(fn($email) => filter_var($email, FILTER_VALIDATE_EMAIL))->unique()->values()->all();
 
         if (empty($emails)) {
-            return response()->json(['error' => 'Geçersiz e-posta formatı.'], 400);
+            return response()->json(['error' => 'Invalid email format.'], 400);
         }
         $subject = $testSubject;
         $view = 'emails.bulkmailer';
@@ -61,13 +63,14 @@ class BulkEmailController extends Controller
             'message' => $testMessage,
             'testItem' => $testItem,
             'subject' => $testSubject,
+            'testItem2' => $testItem2,
         ];
     
         try {
             BulkEmailer::sendBulkMail($emails, $subject, $view, $data);
-            return response()->json(['message' => 'E-postalar başarıyla gönderildi!']);
+            return response()->json(['message' => 'Emails sent successfully!']);
         } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500); // Hata mesajını göster
+            return response()->json(['error' => $e->getMessage()], 500); // Error Message View
         }
     }
 }
@@ -75,16 +78,16 @@ class BulkEmailController extends Controller
 
 ## web.php
 
-Rotaları Ekleyelim :
+Add Routes :
 
 ```php
 Route::get('/bulk-email', [BulkEmailController::class, 'BulkMail'])->name('bulk.email');
 Route::post('/send-bulk-email', [BulkEmailController::class, 'sendBulkMail'])->name('send.bulk.email');
 ```
 
-## Form View
+## Example Form View
 
-Burası Tamamen size ait istediğiniz gibi özelleştirebilirsiniz :
+This place is completely yours, you can customize it as you wish:
 
 ```php
 <form method="POST" action="{{ route('send.bulk.email') }}">
@@ -99,8 +102,30 @@ Burası Tamamen size ait istediğiniz gibi özelleştirebilirsiniz :
     </div>
     <div class="form-group mt-3">
         <label class="form-label text-primary" for="exampleFormControlTextarea1">Mail Content</label>
-        <textarea name="content" id="editor" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        <textarea name="content" class="form-control" rows="5"></textarea>
     </div>
     <button id="submitButton" type="submit" class="btn mt-3 btn-primary">Send</button>
 </form>
+```
+
+## Example Mail View
+
+This place is completely yours, you can customize it as you wish:
+
+```php
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $subject ?? 'E-posta Başlığı' }}</title>
+</head>
+<body>
+
+<div class="email-container">
+    <p>{{ $data['message'] ?? 'E-posta Başlığı' }}</p>
+</div>
+
+</body>
+</html>
 ```
