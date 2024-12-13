@@ -118,12 +118,12 @@ This place is completely yours, you can customize it as you wish:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $subject ?? 'E-posta Başlığı' }}</title>
+    <title>{{ $subject ?? 'Mail Subject' }}</title>
 </head>
 <body>
 
 <div class="email-container">
-    <p>{{ $data['message'] ?? 'E-posta Başlığı' }}</p>
+    <p>{{ $data['message'] ?? 'Mail Subject' }}</p>
 </div>
 
 </body>
